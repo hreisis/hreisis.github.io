@@ -5,3 +5,5 @@ const productUpdates={"paradiso": {"caseStudy": "paradiso.html", "description": 
 projects.forEach(p=>{if(productUpdates[p.id])Object.assign(p,productUpdates[p.id]);});
 const motionPreviews={"invisible": "invisible", "gravity": "gravity", "hollywood": "hollywood", "mojave": "mojave", "super-hongo": "hongo", "signal": "signal", "paradiso": "paradiso", "earth": "earth", "pirates": "pirates", "wormhole": "wormhole"};
 projects.forEach(p=>{if(motionPreviews[p.id]){p.preview="preview-"+motionPreviews[p.id]+".gif";p.poster="preview-"+motionPreviews[p.id]+".webp";}});
+
+projects.push({id:"lemuria",title:"Lemuria",category:"brand",kind:"Brand identity · Florals",year:"2023",caseStudy:"lemuria.html",description:"A floral identity, from expressive business cards to the finishing touch on a bouquet."});
