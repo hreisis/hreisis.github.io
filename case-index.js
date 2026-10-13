@@ -6,7 +6,10 @@ projects.forEach(p=>{if(productUpdates[p.id])Object.assign(p,productUpdates[p.id
 const motionPreviews={"gamma":"gamma","invisible": "invisible", "gravity": "gravity", "hollywood": "hollywood", "mojave": "mojave", "super-hongo": "hongo", "signal": "signal", "paradiso": "paradiso", "earth": "earth", "pirates": "pirates", "wormhole": "wormhole"};
 projects.forEach(p=>{if(motionPreviews[p.id]){p.preview="preview-"+motionPreviews[p.id]+".gif";p.poster="preview-"+motionPreviews[p.id]+".webp";}});
 
-Object.assign(projects.find(p=>p.id==="gamma"),{preview:"preview-gamma-scroll.gif",poster:"preview-gamma-scroll.webp"});
+Object.assign(projects.find(p=>p.id==="gamma"),{preview:"preview-gamma-briefing.gif",poster:"preview-gamma-briefing.webp"});
 projects.find(p=>p.id==="signal").preview="preview-signal-fast.gif";
 projects.find(p=>p.id==="gamma").description="Market evidence, separate risk and opportunity, and a reviewable daily view.";
 projects.push({id:"lemuria",title:"Lemuria",category:"brand",kind:"Brand identity · Florals",year:"2023–2024",caseStudy:"lemuria.html",description:"A floral identity, from expressive business cards to the finishing touch on a bouquet."});
+
+const projectStacks={"gamma": "React \u00b7 Next.js \u00b7 TypeScript \u00b7 OpenAI API \u00b7 Vercel", "signal": "Pine Script \u00b7 TradingView \u00b7 Alpaca API", "earth": "React \u00b7 JavaScript \u00b7 Material UI \u00b7 Firebase \u00b7 Google Maps API", "pirates": "React Native \u00b7 JavaScript \u00b7 Expo \u00b7 Redux Toolkit", "paradiso": "React \u00b7 JavaScript \u00b7 Redux \u00b7 Node.js \u00b7 Express \u00b7 MongoDB \u00b7 Firebase", "spectrum": "Unity \u00b7 Augmented reality", "wormhole": "Three.js \u00b7 JavaScript \u00b7 Blender"};
+projects.forEach(p=>{if(projectStacks[p.id])p.stack=projectStacks[p.id];});
